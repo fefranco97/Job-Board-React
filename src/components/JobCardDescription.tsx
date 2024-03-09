@@ -10,7 +10,7 @@ function JobCardDescription({ JobOpportunity }: jobOpportunityProps) {
 
   return (
     <>
-      <div className="container mx-auto flex flex-col items-baseline gap-3 rounded-xl p-6 bg-white max-w-md h-full ">
+      <div className="flex flex-col items-baseline gap-3 rounded-3xl p-6 bg-white max-w-md shadow-md">
         <img
           src={JobOpportunity.company.logoPath}
           alt={JobOpportunity.company.logoAlt}

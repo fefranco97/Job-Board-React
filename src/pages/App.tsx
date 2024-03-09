@@ -1,5 +1,6 @@
 import JobCard from '../components/JobCard'
 import JobCardDescription from '../components/JobCardDescription'
+import SearchInput from '../components/SearchInput'
 
 const jobOpportunityMockup = {
   id: crypto.randomUUID().toString(),
@@ -22,8 +23,25 @@ const jobOpportunityMockup = {
 function App() {
   return (
     <>
-      <div className="container mx-auto flex gap-7 ">
-        <JobCard JobOpportunity={jobOpportunityMockup} />
+      <div className="container mx-auto mt-10 flex justify-center gap-8 ">
+        <div className="flex flex-col gap-8">
+          <SearchInput />
+          <div className="bg-zinc-100 p-5 rounded-3xl shadow-md">
+            <div className="flex justify-between">
+              <h1 className="font-bold text-2xl">Search Results</h1>
+              <p className="font-semibold">1.100 results found</p>
+            </div>
+            <div className="cotainer mx-auto grid grid-cols-2 gap-5 mt-5 justify-center ">
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+              <JobCard JobOpportunity={jobOpportunityMockup} />
+            </div>
+          </div>
+        </div>
+
         <JobCardDescription JobOpportunity={jobOpportunityMockup} />
       </div>
     </>
